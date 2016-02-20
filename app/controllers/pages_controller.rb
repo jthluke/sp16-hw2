@@ -11,12 +11,13 @@ class PagesController < ApplicationController
   end
 
   def age
-	dude = Person.new "John Doe", 16
+  end
+
+  def person
+	dude = Person.new(params[:name],params[:age])
 	@myIntro = dude.introduce
 	@myBirth = dude.birth_year
 	@myNick = dude.nickname
   end
 
-  def person
-  end
 end
